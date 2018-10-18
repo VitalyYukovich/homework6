@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Liquid Distortion Effects</title>
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script src="js/pixi.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script>document.documentElement.className = 'js';</script>
+	</head>
+	</body>
+		<svg>
+			<symbol id="icon-arrow-nav" viewBox="208.3 352 4.2 6.4">
+				<title>arrow-nav</title>
+				<polygon points="207,357 205.7,355 207,353.3 204.5,355"></polygon>
+			</symbol>
+		</svg>
+			<div class="content" id="text">
+				<div class="slide-wrapper">
+					<div class="slide-item" >
+						<img src="https://pp.userapi.com/c849024/v849024450/9e006/-FqaSNKyeQQ.jpg" class="slide-item__image">
+					</div>
+					<div class="slide-item">
+						<img src="https://pp.userapi.com/c830308/v830308198/1b53ad/UGVuxsXTX0w.jpg" class="slide-item__image">
+					</div>
+					<div class="slide-item">
+						<img src="https://pp.userapi.com/c845216/v845216739/112dee/xU913cHxrEk.jpg" class="slide-item__image">
+					</div>					
+				</div>
+				<button class="scene-nav scene-nav--prev" data-nav="previous"><svg class="icon icon--arrow-nav-prev"><use xlink:href="#icon-arrow-nav"></use></svg></button>
+				<button class="scene-nav scene-nav--next" data-nav="next"><svg class="icon icon--arrow-nav-next"><use xlink:href="#icon-arrow-nav"></use></svg></button>
+			</div>
+		<script>
+			var spriteImages 	= document.querySelectorAll( '.slide-item__image' );
+			
+			var spriteImagesSrc = [];
+
+			for ( var i = 0; i < spriteImages.length; i++ ) {
+				var img = spriteImages[i];
+				spriteImagesSrc.push( img.getAttribute('src' ) );
+			}
+
+			var initCanvasSlideshow = new CanvasSlideshow({
+				sprites: spriteImagesSrc,
+				displacementImage: 'https://pp.userapi.com/c845017/v845017198/111768/3b3vdDNzltg.jpg',
+				autoPlay: true,
+				autoPlaySpeed: [10, 3],
+				displaceScale: [200, 70]
+			});
+		</script>
+	</body>
+</html>
